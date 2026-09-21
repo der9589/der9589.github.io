@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立花美凉-知名日本女演员写真集与影视作品资料库</title>
+    <meta name="description" content="立花美凉官方网站资料集。收录立花美凉个人简介、代表作品列表、经典影视作品介绍及高清写真资源。提供最新的演艺动态与粉丝社区互动指南。">
+    <meta name="keywords" content="立花美凉, 日本女演员, 影视作品, 写真集, 个人资料">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e91e63;
+            --secondary-color: #f8f9fa;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #ffffff;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://picsum.photos/seed/mizanori/1920/1080') center/cover no-repeat;
+            opacity: 0.15;
+            mix-blend-mode: multiply;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            background-color: #d81b60;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .view-all {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .view-all:hover {
+            color: var(--primary-color);
+        }
+
+        /* Profile Section */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            aspect-ratio: 3/4;
+            object-fit: cover;
+        }
+
+        .profile-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .info-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-desc {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Works Section (Grid) */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .work-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+
+        .work-thumb {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .work-body {
+            padding: 20px;
+        }
+
+        .work-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            color: var(--primary-color);
+            background-color: #fce4ec;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .work-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .work-year {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            margin-bottom: 60px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f8f9fa;
+            padding: 50px 20px 20px;
+            border-top: 1px solid #eee;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .footer-brand p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .footer-col h4 {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                height: auto;
+                flex-direction: column;
+                padding: 15px;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">立花美凉<span>FanSite</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#profile">个人简介</a></li>
+                    <li><a href="#works">影视作品</a></li>
+                    <li><a href="#gallery">写真图集</a></li>
+                    <li><a href="#news">动态资讯</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>立花美凉</h1>
+                <p>日本知名女演员，以其独特的气质和出色的演技在影视界崭露头角。探索她的演艺生涯与精彩瞬间。</p>
+                <a href="#works" class="cta-button">查看作品列表</a>
+            </div>
+        </section>
+
+        <section class="container" id="profile">
+            <div class="profile-grid">
+                <img src="https://picsum.photos/seed/mizanori_face/400/600" alt="立花美凉肖像" class="profile-img">
+                <div class="profile-info">
+                    <h3>关于立花美凉</h3>
+                    <div class="info-list">
+                        <div class="info-item"><strong>姓名</strong>立花美凉</div>
+                        <div class="info-item"><strong>国籍</strong>日本</div>
+                        <div class="info-item"><strong>出生日期</strong>1994年12月5日</div>
+                        <div class="info-item"><strong>出生地</strong>日本东京都</div>
+                        <div class="info-item"><strong>身高</strong>158cm</div>
+                        <div class="info-item"><strong>血型</strong>A型</div>
+                    </div>
+                    <p class="profile-desc">
+                        立花美凉是日本新生代女演员的代表人物之一。自出道以来，她凭借清新自然的演技风格和极具辨识度的面孔，迅速在电视剧和电影领域积累了大量粉丝。她擅长演绎充满活力且内心细腻的角色，无论是青春校园剧中的阳光少女，还是悬疑剧中的神秘女主角，都能展现出极强的可塑性。除了演艺事业，她在时尚界也备受瞩目，多次受邀参与各大时尚杂志的拍摄，是年轻一代关注的焦点。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="works">
+            <div class="section-header">
+                <h2>代表影视作品</h2>
+                <a href="#" class="view-all">查看全部 &rarr;</a>
+            </div>
+            <div class="works-grid">
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/movie1/400/600" alt="作品海报" class="work-thumb">
+                    <div class="work-body">
+                        <span class="work-tag">电视剧</span>
+                        <h3 class="work-title">恋爱回旋</h3>
+                        <p class="work-year">2017年 | 演出：主要角色</p>
+                    </div>
+                </article>
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/movie2/400/600" alt="作品海报" class="work-thumb">
+                    <div class="work-body">
+                        <span class="work-tag">电影</span>
+                        <h3 class="work-title">东京爱情故事：续集</h3>
+                        <p class="work-year">2019年 | 演出：主演</p>
+                    </div>
+                </article>
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/movie3/400/600" alt="作品海报" class="work-thumb">
+                    <div class="work-body">
+                        <span class="work-tag">电视剧</span>
+                        <h3 class="work-title">深夜食堂：新章</h3>
+                        <p class="work-year">2020年 | 演出：重要配角</p>
+                    </div>
+                </article>
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/movie4/400/600" alt="作品海报" class="work-thumb">
+                    <div class="work-body">
+                        <span class="work-tag">特别篇</span>
+                        <h3 class="work-title">圣诞夜的奇迹</h3>
+                        <p class="work-year">2021年 | 演出：女主角</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container" id="gallery">
+            <div class="section-header">
+                <h2>写真图集</h2>
+                <a href="#" class="view-all">查看相册 &rarr;</a>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://picsum.photos/seed/g1/500/500" alt="写真"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/g2/500/500" alt="写真"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/g3/500/500" alt="写真"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/g4/500/500" alt="写真"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/g5/500/500" alt="写真"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/g6/500/500" alt="写真"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/g7/500/500" alt="写真"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/g8/500/500" alt="写真"></div>
+            </div>
+        </section>
+
+        <section class="container" id="news">
+            <div class="section-header">
+                <h2>最新动态</h2>
+            </div>
+            <div style="background: white; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+                <ul style="border-left: 3px solid var(--primary-color); padding-left: 20px;">
+                    <li style="margin-bottom: 20px;">
+                        <span style="color: #999; font-size: 0.85rem; display: block; margin-bottom: 5px;">2023年10月15日</span>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">立花美凉主演的新电影《光之彼端》定档</h4>
+                        <p style="color: var(--text-light); font-size: 0.95rem;">备受期待的电影《光之彼端》正式宣布将于下月15日在日本全国公映。立花美凉在片中饰演一位寻找失散亲人的钢琴家...</p>
+                    </li>
+                    <li style="margin-bottom: 20px;">
+                        <span style="color: #999; font-size: 0.85rem; display: block; margin-bottom: 5px;">2023年08月20日</span>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">受邀担任时尚杂志《VOCE》八月刊封面人物</h4>
+                        <p style="color: var(--text-light); font-size: 0.95rem;">立花美凉此次以“夏日清爽”为主题拍摄了一组极具视觉冲击力的时尚大片，展现了不同于以往的多面魅力。</p>
+                    </li>
+                    <li>
+                        <span style="color: #999; font-size: 0.85rem; display: block; margin-bottom: 5px;">2023年05月10日</span>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">出演舞台剧《红色高跟鞋》获得好评</h4>
+                        <p style="color: var(--text-light); font-size: 0.95rem;">立花美凉首次挑战舞台剧，在剧中一人分饰两角，凭借精湛的演技赢得了观众和评论界的一致好评。</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>立花美凉 FanSite</h3>
+                <p>本站为非营利性粉丝资料整理网站，旨在为喜爱立花美凉女士的观众提供便捷的信息查询服务。所有图片及视频资源版权归原作者所有。</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#profile">个人简介</a></li>
+                        <li><a href="#works">影视作品</a></li>
+                        <li><a href="#gallery">写真图集</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">官方事务所</a></li>
+                        <li><a href="#">日本电影数据库</a></li>
+                        <li><a href="#">Twitter 官方账号</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>免责声明</h4>
+                    <ul>
+                        <li><a href="#">版权说明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 立花美凉资料库. All Rights Reserved. Designed by AI Assistant.</p>
+        </div>
+    </footer>
+
+</body>
+                                                  </html>
