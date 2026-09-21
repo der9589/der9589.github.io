@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刚开一秒传奇-热血私服下载与战斗攻略指南</title>
+    <meta name="description" content="本站提供最新刚开一秒传奇私服推荐，包含复古1.76版本、1.85版本及各种微变版本。提供服务器地址、登录器下载、新手攻略、BOSS攻略及新区开服时间表。">
+    <meta name="keywords" content="刚开一秒传奇,传奇私服,1.76传奇,传奇下载,复古传奇,热血传奇私服">
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红 */
+            --secondary-color: #DAA520; /* 金色 */
+            --bg-dark: #121212;
+            --bg-card: #1E1E1E;
+            --text-main: #E0E0E0;
+            --text-muted: #A0A0A0;
+            --accent: #FF4500; /* 橙红 */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 顶部导航 */
+        header {
+            background: linear-gradient(180deg, #1a0505 0%, #2d0a0a 100%);
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-shadow: 0 0 10px rgba(218, 165, 32, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .server-status {
+            font-size: 12px;
+            color: #4CAF50;
+            background: rgba(76, 175, 80, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid #4CAF50;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            background: url('https://picsum.photos/seed/legend/1600/600') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.1s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #8B0000, #D32F2F);
+            color: white;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(45deg, #DAA520, #FBC02D);
+            color: #3e2723;
+            margin-left: 15px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* 主要内容布局 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 15px;
+        }
+
+        /* 版本分类 */
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+            color: #fff;
+        }
+
+        .versions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .version-card {
+            background: var(--bg-card);
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .version-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-color);
+        }
+
+        .card-img {
+            height: 180px;
+            background-color: #000;
+            position: relative;
+        }
+        
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent);
+            color: white;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 2px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card-info {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: #bbb;
+            margin-bottom: 20px;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* 游戏特色/优势 */
+        .features {
+            background-color: #181818;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 40px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* 攻略专区 */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .guide-item {
+            display: flex;
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 8px;
+            align-items: center;
+            border-left: 4px solid transparent;
+            transition: background 0.2s;
+        }
+
+        .guide-item:hover {
+            background: #252525;
+            border-left-color: var(--secondary-color);
+        }
+
+        .guide-icon {
+            font-size: 24px;
+            margin-right: 20px;
+            color: var(--secondary-color);
+            min-width: 40px;
+        }
+
+        .guide-content {
+            flex: 1;
+        }
+
+        .guide-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .guide-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .guide-link {
+            color: var(--secondary-color);
+            font-size: 14px;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #0a0a0a;
+            padding: 40px 15px 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            color: #555;
+            font-size: 12px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .guide-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .guide-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .guide-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <span>⚔️</span> 刚开一秒传奇
+        </div>
+        <nav class="nav-links">
+            <a href="#">首页</a>
+            <a href="#">版本下载</a>
+            <a href="#">新手攻略</a>
+            <a href="#">BOSS攻略</a>
+            <a href="#">开服列表</a>
+        </nav>
+        <div class="server-status">● 服务器运行正常</div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>刚开一秒传奇</h1>
+        <p>告别繁琐，回归经典。首充送神装，上线送VIP，纯打宝，无任何付费限制，体验最纯粹的兄弟情义。</p>
+        <div>
+            <button class="btn btn-primary" onclick="alert('正在跳转至下载页面...')">立即下载客户端</button>
+            <button class="btn btn-secondary" onclick="alert('正在打开游戏登录器...')">进入游戏大厅</button>
+        </div>
+    </div>
+</section>
+
+<main>
+    <!-- 游戏特色 -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i>💎</i>
+                    <h3>首充巨惠</h3>
+                    <p>1元首充送极品武器，6元首充送全套神装，让平民玩家也能纵横沙巴克。</p>
+                </div>
+                <div class="feature-item">
+                    <i>🏹</i>
+                    <h3>自由PK</h3>
+                    <p>野外无锁区，全自由PK，抢夺BOSS，攻占沙城，热血战斗一触即发。</p>
+                </div>
+                <div class="feature-item">
+                    <i>⚔️</i>
+                    <h3>装备掉落</h3>
+                    <p>纯打宝模式，极品装备全靠打，拒绝数值碾压，还原经典传奇体验。</p>
+                </div>
+                <div class="feature-item">
+                    <i>🤝</i>
+                    <h3>兄弟集结</h3>
+                    <p>行会系统完善，兄弟齐心，其利断金。攻城战、野战等你来战。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 版本列表 -->
+    <section class="container">
+        <h2 class="section-title">热门版本推荐</h2>
+        <div class="versions-grid">
+            <!-- 版本 1 -->
+            <article class="version-card">
+                <div class="card-img">
+                    <span class="card-badge">新区开放</span>
+                    <img src="https://picsum.photos/seed/legend1/400/250" alt="复古1.76">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">复古1.76传奇</h3>
+                    <div class="card-info">
+                        <span>人数: 128/200</span>
+                        <span>更新: 刚开服</span>
+                    </div>
+                    <p class="card-desc">原汁原味1.76版本，祖玛寺庙、赤月峡谷等你探索，爆率调整至1.5%，热血回归。</p>
+                    <button class="btn btn-primary btn-block">下载客户端</button>
+                </div>
+            </article>
+
+            <!-- 版本 2 -->
+            <article class="version-card">
+                <div class="card-img">
+                    <span class="card-badge">微变</span>
+                    <img src="https://picsum.photos/seed/legend2/400/250" alt="微变超变">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">微变超变传奇</h3>
+                    <div class="card-info">
+                        <span>人数: 256/300</span>
+                        <span>更新: 1小时前</span>
+                    </div>
+                    <p class="card-desc">技能炫酷，怪物血量增加，奖励丰厚。自动回收，自动寻路，适合上班族快速升级。</p>
+                    <button class="btn btn-primary btn-block">下载客户端</button>
+                </div>
+            </article>
+
+            <!-- 版本 3 -->
+            <article class="version-card">
+                <div class="card-img">
+                    <span class="card-badge">高爆</span>
+                    <img src="https://picsum.photos/seed/legend3/400/250" alt="高爆版">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">高爆一刀传奇</h3>
+                    <div class="card-info">
+                        <span>人数: 88/150</span>
+                        <span>更新: 3小时前</span>
+                    </div>
+                    <p class="card-desc">挂机即爆装，一刀999，BOSS必爆神装。不充钱也能玩，全服唯一神装等你拿。</p>
+                    <button class="btn btn-primary btn-block">下载客户端</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 攻略与FAQ -->
+    <section class="container">
+        <h2 class="section-title">新手入门与攻略</h2>
+        <div class="guide-list">
+            <a href="#" class="guide-item">
+                <div class="guide-icon">📜</div>
+                <div class="guide-content">
+                    <div class="guide-title">刚开服第一天怎么玩？快速升级路线</div>
+                    <div class="guide-desc">包含前期任务指引、BOSS刷新点位置、装备获取途径及行会加入建议。</div>
+                </div>
+                <div class="guide-link">查看攻略 &rarr;</div>
+            </a>
+
+            <a href="#" class="guide-item">
+                <div class="guide-icon">⚔️</div>
+                <div class="guide-content">
+                    <div class="guide-title">战士职业PK技巧：攻沙战操作指南</div>
+                    <div class="guide-desc">掌握烈火剑法的释放时机、野蛮冲撞的使用技巧，成为沙巴克城主。</div>
+                </div>
+                <div class="guide-link">查看攻略 &rarr;</div>
+            </a>
+
+            <a href="#" class="guide-item">
+                <div class="guide-icon">💰</div>
+                <div class="guide-content">
+                    <div class="guide-title">经济系统详解：金币与元宝如何获取</div>
+                    <div class="guide-desc">分析游戏内经济循环，教你如何通过打怪、任务和交易积累财富。</div>
+                </div>
+                <div class="guide-link">查看攻略 &rarr;</div>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">免责声明</a>
+            <a href="#">游戏公告</a>
+            <a href="#">联系客服</a>
+            <a href="#">反馈建议</a>
+        </div>
+        <p class="copyright">
+            本站为玩家提供游戏下载与资讯服务，所有游戏版权归原游戏公司所有。<br>
+            请广大玩家合理安排时间，健康游戏。
+        </p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
