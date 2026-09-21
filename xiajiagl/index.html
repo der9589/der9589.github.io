@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="下嫁GL精品小说阅读站，提供高质量百合言情小说、豪门恩怨、先婚后爱等题材的免费在线阅读。收录经典下嫁题材作品，更新及时，排版舒适。">
+    <meta name="keywords" content="下嫁gl,百合小说,女同小说,GL文学,言情小说">
+    <title>下嫁GL-精品百合小说阅读与推荐平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #b8860b; /* 暗金色，象征经典与尊贵 */
+            --primary-hover: #daa520;
+            --bg-color: #f9f7f2;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--text-main);
+            font-weight: normal;
+            font-size: 16px;
+            margin-left: 8px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 150px;
+            font-size: 14px;
+        }
+
+        .search-box button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbf7 0%, #f0e6d2 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #4a3b2a;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(184, 134, 11, 0.1);
+            color: var(--primary-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .tag:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 40px var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+
+        /* Book Grid */
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 5px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .book-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 300px;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .book-card:hover .book-cover img {
+            transform: scale(1.05);
+        }
+
+        .book-info {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .book-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .book-tags {
+            margin-top: auto;
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .mini-tag {
+            font-size: 10px;
+            padding: 2px 6px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            color: #888;
+        }
+
+        .book-actions {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .rank-list {
+            list-style: none;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .rank-num {
+            width: 20px;
+            height: 20px;
+            background: #eee;
+            color: #888;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+
+        .rank-item:nth-child(1) .rank-num { background: #ffd700; color: white; }
+        .rank-item:nth-child(2) .rank-num { background: #c0c0c0; color: white; }
+        .rank-item:nth-child(3) .rank-num { background: #cd7f32; color: white; }
+
+        .rank-item a {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .update-time {
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+
+        .info-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .info-content p {
+            margin-bottom: 15px;
+            text-indent: 2em;
+            color: #444;
+        }
+
+        .info-content ul {
+            margin-left: 2em;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .info-content li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #aaa;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">下嫁GL <span>精品阅读</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">最新更新</a></li>
+                    <li><a href="#">分类排行</a></li>
+                    <li><a href="#">书单推荐</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索书名、作者...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero">
+            <h1>探寻爱与尊严的平衡</h1>
+            <p>在复杂的豪门与世俗眼光中，寻找那份真挚而坚韧的情感连接。GL文学为您呈现最动人的下嫁故事。</p>
+            <div class="hero-tags">
+                <span class="tag">先婚后爱</span>
+                <span class="tag">豪门恩怨</span>
+                <span class="tag">年龄差</span>
+                <span class="tag">职场恋情</span>
+                <span class="tag">治愈系</span>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Main Content -->
+            <div class="content-area">
+                <section class="section-title">
+                    <span>热门推荐</span>
+                    <a href="#" style="font-size: 14px; color: var(--primary-color);">查看更多 &gt;</a>
+                </section>
+
+                <div class="book-grid">
+                    <!-- Book 1 -->
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book1/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">豪门婚约：顾总的替嫁新娘</h3>
+                            <div class="book-meta">作者：林语嫣 | 类型：都市/豪门</div>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                一纸契约，她从平民窟嫁入顶级豪门。本以为是一场各取所需的交易，却没想到，那个高不可攀的女人，竟然先动了心...
+                            </p>
+                            <div class="book-tags">
+                                <span class="mini-tag">下嫁</span>
+                                <span class="mini-tag">契约</span>
+                                <span class="mini-tag">甜宠</span>
+                            </div>
+                            <div class="book-actions">
+                                <button class="btn btn-primary">立即阅读</button>
+                                <button class="btn btn-outline">收藏</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 2 -->
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book2/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">错位婚姻：影后的上位之路</h3>
+                            <div class="book-meta">作者：苏苏 | 类型：娱乐圈/励志</div>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                为了复仇，她嫁给了一个毫无存在感的男人。谁能想到，这个男人竟然是隐藏的顶级财阀。婚后生活，火花四溅。
+                            </p>
+                            <div class="book-tags">
+                                <span class="mini-tag">复仇</span>
+                                <span class="mini-tag">影后</span>
+                            </div>
+                            <div class="book-actions">
+                                <button class="btn btn-primary">立即阅读</button>
+                                <button class="btn btn-outline">收藏</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 3 -->
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book3/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">高岭之花折腰记</h3>
+                            <div class="book-meta">作者：云深不知处 | 类型：校园/成长</div>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                曾经的校花女神如今沦为家庭主妇，而那个曾经仰望她的青梅竹马，如今已是商界新星。当高岭之花跌落凡尘，谁会去接住她？
+                            </p>
+                            <div class="book-tags">
+                                <span class="mini-tag">青梅竹马</span>
+                                <span class="mini-tag">追妻火葬场</span>
+                            </div>
+                            <div class="book-actions">
+                                <button class="btn btn-primary">立即阅读</button>
+                                <button class="btn btn-outline">收藏</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 4 -->
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book4/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">婚途漫漫：夫人别来无恙</h3>
+                            <div class="book-meta">作者：墨染青衣 | 类型：年代/温情</div>
+                            <p style="font-size: 13px; color: #666; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                跨越十年的时光，她在最艰难的岁月里嫁给了他。从一无所有到功成名就，她始终是他身后最坚定的依靠。
+                            </p>
+                            <div class="book-tags">
+                                <span class="mini-tag">破镜重圆</span>
+                                <span class="mini-tag">温馨</span>
+                            </div>
+                            <div class="book-actions">
+                                <button class="btn btn-primary">立即阅读</button>
+                                <button class="btn btn-outline">收藏</button>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Content Introduction -->
+                <section class="info-section">
+                    <div class="info-content">
+                        <h2>关于“下嫁”题材</h2>
+                        <p>在百合（GL）文学作品中，“下嫁”通常指地位、财富或社会阶层相对较低的一方（通常是女性）嫁给了地位更高的一方。这种题材往往带有强烈的戏剧冲突，探讨了女性在婚姻中的自我价值、独立人格以及情感博弈。</p>
+                        <p>优秀的“下嫁”故事不仅仅是关于“上位”或“被宠爱”，更侧重于两个灵魂在现实压力下的磨合与成长。它展示了女性如何在婚姻关系中保持尊严，如何在复杂的家庭关系中找到平衡，以及最终实现情感与事业的双赢。</p>
+                        <h3>常见看点：</h3>
+                        <ul>
+                            <li><strong>反差萌：</strong> 高冷精英 vs 活泼/隐忍女主</li>
+                            <li><strong>契约婚姻：</strong> 利益交换下的情感升温</li>
+                            <li><strong>家庭伦理：</strong> 豪门内部的明争暗斗与支持</li>
+                            <li><strong>成长线：</strong> 女主从依附到独立的过程</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Ranking -->
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-title">月度榜单</h3>
+                    <ul class="rank-list">
+                        <li class="rank-item">
+                            <span class="rank-num">1</span>
+                            <a href="#">豪门婚约：顾总的替嫁新娘</a>
+                            <span class="update-time">1.2w</span>
+                        </li>
+                        <li class="rank-item">
+                            <span class="rank-num">2</span>
+                            <a href="#">错位婚姻：影后的上位之路</a>
+                            <span class="update-time">9800</span>
+                        </li>
+                        <li class="rank-item">
+                            <span class="rank-num">3</span>
+                            <a href="#">高岭之花折腰记</a>
+                            <span class="update-time">8500</span>
+                        </li>
+                        <li class="rank-item">
+                            <span class="rank-num">4</span>
+                            <a href="#">婚途漫漫：夫人别来无恙</a>
+                            <span class="update-time">7200</span>
+                        </li>
+                        <li class="rank-item">
+                            <span class="rank-num">5</span>
+                            <a href="#">在此刻拥抱你</a>
+                            <span class="update-time">6500</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ad Placeholder -->
+                <div class="sidebar-widget" style="text-align: center; background: #eee; min-height: 200px; display: flex; align-items: center; justify-content: center; color: #888; font-size: 14px;">
+                    广告位
+                </div>
+
+                <!-- Hot Tags -->
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-title">热门标签</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <a href="#" class="tag" style="font-size: 12px; padding: 4px 10px;">先婚后爱</a>
+                        <a href="#" class="tag" style="font-size: 12px; padding: 4px 10px;">豪门</a>
+                        <a href="#" class="tag" style="font-size: 12px; padding: 4px 10px;">女强</a>
+                        <a href="#" class="tag" style="font-size: 12px; padding: 4px 10px;">年下</a>
+                        <a href="#" class="tag" style="font-size: 12px; padding: 4px 10px;">破镜重圆</a>
+                        <a href="#" class="tag" style="font-size: 12px; padding: 4px 10px;">双洁</a>
+                        <a href="#" class="tag" style="font-size: 12px; padding: 4px 10px;">追妻火葬场</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于下嫁GL</h4>
+                <p style="font-size: 13px; line-height: 1.8;">专注于GL百合小说阅读，提供最舒适的阅读体验和最优质的原创作品。我们致力于推广健康的女性情感文学。</p>
+            </div>
+            <div class="footer-col">
+                <h4>阅读指南</h4>
+                <ul>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">投稿通道</a></li>
+                    <li><a href="#">侵权举报</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>热门分类</h4>
+                <ul>
+                    <li><a href="#">都市言情</a></li>
+                    <li><a href="#">豪门恩怨</a></li>
+                    <li><a href="#">校园青春</a></li>
+                    <li><a href="#">职场励志</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <ul>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">官方微博</a></li>
+                    <li><a href="#">读者交流群</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 下嫁GL精品阅读网 版权所有</p>
+        </div>
+    </footer>
+
+</body>
+      </html>
