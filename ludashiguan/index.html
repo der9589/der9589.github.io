@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="鲁大师官方下载页面，提供正版鲁大师软件安装包、版本更新信息、硬件检测功能介绍及使用指南。安全、快速、专业的电脑硬件检测与优化工具。">
+    <meta name="keywords" content="鲁大师官方下载,鲁大师,电脑检测,硬件测试,系统优化,驱动安装">
+    <title>鲁大师官方下载-正版硬件检测与系统优化工具</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --primary-hover: #0056b3;
+            --secondary-color: #6c757d;
+            --bg-light: #f8f9fa;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --border-color: #e9ecef;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-gray);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(0, 123, 255, 0.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: var(--text-dark);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .feature-tags {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(0, 123, 255, 0.1);
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .download-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            max-width: 450px;
+            margin: 0 auto;
+            border: 1px solid var(--border-color);
+        }
+
+        .download-card h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .version-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .version-item strong {
+            display: block;
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .version-item span {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .file-size {
+            color: var(--success-color);
+            font-size: 14px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btn-block {
+            flex: 1;
+        }
+
+        .security-note {
+            text-align: center;
+            font-size: 13px;
+            color: var(--success-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            font-size: 16px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 123, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 15px;
+        }
+
+        /* Hardware Check Section */
+        .check-section {
+            background-color: var(--bg-light);
+            border-radius: 20px;
+            padding: 60px;
+            margin-bottom: 80px;
+        }
+
+        .check-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .check-steps::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--border-color);
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+        }
+
+        .step-circle {
+            width: 52px;
+            height: 52px;
+            background-color: #fff;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .step-item h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .step-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+            padding: 0 10px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            padding: 20px 0;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-gray);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: auto;
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .check-steps {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .check-steps::before {
+                display: none;
+            }
+
+            .step-item {
+                display: flex;
+                align-items: flex-start;
+                text-align: left;
+                gap: 15px;
+            }
+
+            .step-circle {
+                margin: 0;
+                flex-shrink: 0;
+            }
+
+            .download-card {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>鲁大师</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#features">功能介绍</a></li>
+                    <li><a href="#guide">使用指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#download" class="btn btn-outline">登录/注册</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="download">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1>鲁大师官方下载：专业硬件检测与系统优化工具</h1>
+                        <p>鲁大师是一款集硬件检测、性能测试、驱动管理与系统优化于一体的国产电脑软件。帮助您快速了解电脑配置、检测硬件健康度、更新驱动程序，提升系统运行效率。</p>
+                        <div class="feature-tags">
+                            <span class="tag">硬件检测</span>
+                            <span class="tag">性能跑分</span>
+                            <span class="tag">驱动更新</span>
+                            <span class="tag">系统加速</span>
+                        </div>
+                        <a href="#" class="btn btn-primary" style="font-size: 18px; padding: 12px 30px;">立即下载最新版</a>
+                        <p style="font-size: 14px; color: #999; margin-top: 15px;">支持 Windows 10 / 11 64位系统</p>
+                    </div>
+                    
+                    <div class="download-card">
+                        <h3>鲁大师 v9.0 正式版</h3>
+                        <div class="version-info">
+                            <div class="version-item">
+                                <strong>文件大小</strong>
+                                <span>45.8 MB</span>
+                            </div>
+                            <div class="version-item">
+                                <strong>MD5 校验</strong>
+                                <span>已校验</span>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-primary btn-block" onclick="alert('模拟下载开始...')">下载客户端</a>
+                            <a href="#" class="btn btn-outline btn-block">查看更新日志</a>
+                        </div>
+                        <div class="security-note">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            官方安全认证 · 绿色无毒
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>鲁大师核心功能</h2>
+                    <p>全方位的电脑硬件诊断与优化方案</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>硬件检测</h3>
+                        <p>一键识别电脑所有硬件品牌及型号，包括CPU、显卡、主板、内存、硬盘等，快速生成详细的硬件配置单。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                        </div>
+                        <h3>性能跑分</h3>
+                        <p>基于国际通用的3DMark标准，提供CPU、GPU、硬盘读写等多维度的综合性能测试，对比同类设备找出差距。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>驱动管理</h3>
+                        <p>智能扫描系统中的过期或损坏驱动，自动匹配并下载安装最新版硬件驱动，保障硬件发挥最佳性能。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>硬件健康度检测</h3>
+                        <p>通过压力测试模拟高负载运行环境，检测硬件是否存在过热、不稳定等隐患，保障电脑运行安全。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Guide Section -->
+        <section id="guide" class="check-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>如何使用鲁大师</h2>
+                    <p>简单三步，轻松掌握电脑状态</p>
+                </div>
+                <div class="check-steps">
+                    <div class="step-item">
+                        <div class="step-circle">1</div>
+                        <h4>下载安装</h4>
+                        <p>点击上方按钮下载鲁大师官方安装包，双击运行，按照向导完成安装过程。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle">2</div>
+                        <h4>硬件检测</h4>
+                        <p>打开软件，点击“硬件检测”按钮，软件将自动扫描并列出您电脑的所有硬件信息。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle">3</div>
+                        <h4>性能测试</h4>
+                        <p>在“性能测试”界面点击“开始测试”，软件将对CPU、内存、显卡进行压力测试并生成跑分报告。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <p>关于鲁大师下载与使用的疑问</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">鲁大师是官方软件吗？安全吗？</div>
+                    <div class="faq-answer">
+                        <p>是的，鲁大师是由北京夸克视界科技有限公司开发的正版软件。本页面提供的下载链接均为官方渠道，软件经过安全检测，无病毒、无广告插件，请放心下载使用。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">鲁大师支持哪些操作系统？</div>
+                    <div class="faq-answer">
+                        <p>鲁大师主要支持 Windows 7、Windows 8.1、Windows 10 以及最新的 Windows 11 64位操作系统。对于32位系统，请使用早期版本的鲁大师。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">下载后安装失败怎么办？</div>
+                    <div class="faq-answer">
+                        <p>请确保您的电脑已关闭杀毒软件的拦截功能（部分杀毒软件可能误报），或者尝试以管理员身份运行安装程序。如果问题依旧，建议检查网络连接或更换下载源。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">鲁大师可以清理系统垃圾吗？</div>
+                    <div class="faq-answer">
+                        <p>鲁大师具备“系统加速”功能，可以清理部分临时文件和启动项，优化系统运行速度，但它主要定位是硬件检测工具，不建议作为系统清理软件的替代品。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>鲁大师</h4>
+                    <p style="color: #999; font-size: 14px; line-height: 1.8;">
+                        鲁大师是专业的硬件检测、系统优化工具。我们致力于为用户提供最准确的硬件识别和最便捷的驱动管理服务。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">功能介绍</a></li>
+                        <li><a href="#">下载中心</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">用户协议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023-2024 鲁大师官方网站 版权所有. 京ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
