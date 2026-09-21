@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="影视墙装修效果图大全，提供现代简约、北欧、美式、中式等多种风格的客厅电视背景墙设计案例与搭配指南。">
+    <meta name="keywords" content="影视墙装修效果图大全,客厅背景墙设计,装修案例,家居设计">
+    <title>影视墙装修效果图大全 - 现代家居客厅背景墙设计灵感与案例</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-right: 8px;
+        }
+
+        .filter-tag {
+            padding: 6px 14px;
+            background-color: #f0f2f5;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-tag:hover, .filter-tag.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Grid Layout */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .guide-item {
+            text-align: center;
+        }
+
+        .guide-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #f0f4f8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 24px;
+        }
+
+        .guide-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .guide-item p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            margin-bottom: 16px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+            background-color: var(--card-bg);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-secondary);
+            font-size: 14px;
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 200px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+
+            nav ul {
+                margin: 10px 0;
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
+                <span>家饰灵感</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">现代简约</a></li>
+                    <li><a href="#">北欧风格</a></li>
+                    <li><a href="#">美式乡村</a></li>
+                    <li><a href="#">中式古典</a></li>
+                    <li><a href="#">混搭设计</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">搜索案例</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>影视墙装修效果图大全</h1>
+                <p>精选千万套客厅背景墙设计方案，从材质选择到色彩搭配，为您提供全方位的装修灵感与避坑指南。</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Filter Section -->
+            <section class="filter-bar">
+                <span class="filter-label">风格筛选：</span>
+                <div class="filter-tag active">全部</div>
+                <div class="filter-tag">现代简约</div>
+                <div class="filter-tag">北欧风</div>
+                <div class="filter-tag">美式</div>
+                <div class="filter-tag">新中式</div>
+                <div class="filter-tag">轻奢风</div>
+                <div class="filter-tag">工业风</div>
+                <span class="filter-label" style="margin-left: 20px;">材质筛选：</span>
+                <div class="filter-tag">乳胶漆</div>
+                <div class="filter-tag">壁纸</div>
+                <div class="filter-tag">木饰面</div>
+                <div class="filter-tag">大理石</div>
+            </section>
+
+            <!-- Gallery Grid -->
+            <section class="gallery-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/room1/400/300" alt="现代简约电视墙">
+                        <span class="card-badge">热门</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">极简留白艺术：纯色乳胶漆电视墙</h3>
+                        <p class="card-desc">通过大面积的纯色乳胶漆搭配局部金属线条，营造出干净利落的视觉效果，适合小户型客厅。</p>
+                        <div class="card-meta">
+                            <span>现代简约</span>
+                            <span>120㎡</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/room2/400/300" alt="大理石纹理电视墙">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">大理石纹理：彰显高端大气的轻奢风</h3>
+                        <p class="card-desc">天然大理石电视背景墙，纹理自然流畅，搭配暗色系电视柜，提升整个空间的档次感。</p>
+                        <div class="card-meta">
+                            <span>轻奢风</span>
+                            <span>150㎡</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/room3/400/300" alt="木饰面电视墙">
+                        <span class="card-badge">推荐</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">原木温润：木饰面电视背景墙设计</h3>
+                        <p class="card-desc">使用木饰面板进行格栅拼接，增加空间的层次感和温馨度，非常适合日式或北欧风格。</p>
+                        <div class="card-meta">
+                            <span>北欧风</span>
+                            <span>90㎡</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/room4/400/300" alt="美式乡村电视墙">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">复古砖墙：美式乡村风电视背景墙</h3>
+                        <p class="card-desc">文化石与护墙板的结合，还原美式乡村的质朴与自然，搭配复古壁炉造型更添韵味。</p>
+                        <div class="card-meta">
+                            <span>美式乡村</span>
+                            <span>140㎡</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/room5/400/300" alt="新中式电视墙">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">水墨意境：新中式格栅电视墙</h3>
+                        <p class="card-desc">采用黑胡桃木格栅，结合水墨画背景，营造出宁静致远的东方美学意境。</p>
+                        <div class="card-meta">
+                            <span>新中式</span>
+                            <span>180㎡</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/room6/400/300" alt="背景墙收纳设计">
+                        <span class="card-badge">实用</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">隐形收纳：悬浮式电视柜背景墙</h3>
+                        <p class="card-desc">电视柜悬空设计，下方留空增加通透感，同时隐藏了部分杂物，保持视觉整洁。</p>
+                        <div class="card-meta">
+                            <span>实用主义</span>
+                            <span>100㎡</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Guide Section -->
+            <section class="guide-section">
+                <div class="section-header">
+                    <h2>影视墙设计避坑指南</h2>
+                    <p>在装修前，了解这些关键点能让您的客厅更出彩</p>
+                </div>
+                <div class="guide-grid">
+                    <div class="guide-item">
+                        <div class="guide-icon">📏</div>
+                        <h3>尺寸与比例</h3>
+                        <p>电视墙宽度一般建议是电视宽度的1.2-1.5倍，避免过于压抑或空旷。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">💡</div>
+                        <h3>灯光布局</h3>
+                        <p>建议使用灯带洗墙，配合射灯重点照明，提升层次感，避免电视直接对着强光。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">🛋️</div>
+                        <h3>沙发距离</h3>
+                        <p>沙发与电视墙之间需保持3米以上的距离，以保证观影舒适度和视觉呼吸感。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">🎨</div>
+                        <h3>色彩搭配</h3>
+                        <p>背景墙颜色不宜过深，建议采用“上浅下深”或“中间浅、两侧深”的渐变手法。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">影视墙装修一般需要多少钱？</div>
+                    <div class="faq-answer">
+                        装修费用取决于选用的材质和设计复杂程度。简单的乳胶漆背景墙仅几百元，而使用大理石、木饰面或定制柜体的费用通常在几千元至上万元不等。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">小户型如何设计影视墙？</div>
+                    <div class="faq-answer">
+                        小户型建议选择浅色系、简洁的设计，避免使用大面积深色或繁杂的纹理。可以利用壁龛设计增加收纳，或者采用隐形电视柜节省空间。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">电视背景墙一定要做造型吗？</div>
+                    <div class="faq-answer">
+                        不一定。如果户型方正且采光良好，保留大白墙或使用简单的壁纸也是不错的选择，这种设计更耐看，且后期更换成本低。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何防止电视墙发黄老化？</div>
+                    <div class="faq-answer">
+                        选择耐黄变、耐擦洗的环保材料。如果是壁纸，建议选择纸质或无纺布材质，避免使用容易褪色的PVC壁纸。同时注意室内通风，减少阳光直射。
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">版权声明</a>
+                <a href="#">联系方式</a>
+                <a href="#">用户协议</a>
+            </div>
+            <p class="copyright">&copy; 2023 家饰灵感 - 影视墙装修效果图大全. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Filter Tag Logic (Visual Only)
+            const filterTags = document.querySelectorAll('.filter-tag');
+            filterTags.forEach(tag => {
+                tag.addEventListener('click', () => {
+                    filterTags.forEach(t => t.classList.remove('active'));
+                    tag.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
